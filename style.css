@@ -1,0 +1,182 @@
+/* Custom Peroperties */
+
+:root {
+    font-family: 'Red Hat Display', sans-serif;
+    /* ## Colors
+    ### Primary */
+    --Pale-blue: rgb(224, 232, 255);
+    --Pale-blue-ho: rgba(224, 232, 255, 0.4);
+    --brightblue: rgb(56, 41, 224);
+    /* ### Neutral */
+    --verypaleblue: rgb(245, 247, 255);
+    --desaturatedblue: rgb(114, 128, 167);
+    --darkblue: rgb(31, 47, 86);
+    --btn-hover: rgb(118, 108, 241);
+}
+
+/* Resets */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, p, figure, picture {
+    margin: 0;
+}
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Classes */
+
+.d-flex {
+    display: flex;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, 1.25rem);
+}
+
+.flow-inline > *:not(*:last-child) {
+    margin-right: var(--flow-space, 1rem);
+}
+
+.container {
+    width: 450px;
+    margin: 0 auto;
+    padding-bottom: 1.25rem;
+}
+
+/* Font Weights */
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+/* Colors */
+
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-gray {
+    color: var(--desaturatedblue);
+}
+
+/* Layout */
+
+body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: url(images/pattern-background-desktop.svg) rgba(224, 232, 255, 0.55);
+    background-blend-mode: soft-light;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+}
+
+main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: white;
+    text-align: center;
+    line-height: 1.75rem;
+    border-radius: 20px;
+    box-shadow: 0px 13px 20px 8px rgba(0,0,0,0.05);
+}
+
+.card-img > img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-body {
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-body p {
+    padding-inline: 3rem;
+}
+
+.card-body .payment {
+    width: 80%;
+    padding: 1.5rem;
+
+    background-color: var(--Pale-blue-ho);
+    border-radius: 15px;
+    align-items: center;
+}
+
+.payment div {
+    flex-direction: column;
+}
+
+.payment a {
+    margin-left: auto;
+}
+
+.payment a:hover {
+    text-decoration: none;
+    color: var(--btn-hover);
+}
+
+.buttons {
+    width: 80%;
+}
+
+.buttons button {
+    width: 100%;
+    display: block;
+    padding-block: 0.75rem;
+    
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+}
+
+.buttons button:hover {
+    color: black;
+}
+
+.buttons #payment-btn {
+    background-color: var(--brightblue);
+    box-shadow: 0px 13px 20px 8px rgba(31, 47, 86, 0.15);
+}
+
+.buttons #payment-btn:hover {
+    background-color: var(--btn-hover);
+    box-shadow: 0px 6px 20px 0px rgba(118, 108, 241, 0.25);
+    color: white;
+}
+
+@media(max-width: 30em) {
+
+    .container {
+        width: 360px;
+    }
+}
